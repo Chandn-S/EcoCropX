@@ -1,0 +1,217 @@
+/* App.css */
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+h2{
+  color:#f0ddb9;
+}
+/* Header Styles */
+.headerFile {
+  background-color: wheat; /* Bright background for visibility */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box; /* Prevents padding from adding to width */
+  position: sticky; /* Keeps the navbar at the top when scrolling */
+  top: 0; /* Sticks to the top */
+  z-index: 1; /* Ensures it stays above other content */
+  max-height: 50px;
+  position: fixed;
+}
+
+.headerFile img{
+  height: 40px;
+  width: 40px;
+}
+
+.headerFile > div {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333; /* Darker text for contrast */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.headerFile > .hamb {
+  font-size: 24px; /* Larger for a "menu" icon look */
+}
+
+.headerFile > div:hover {
+  color: rgb(252, 251, 251); /* Light text color on hover */
+  background-color: #333; /* Dark background on hover */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: -290px; /* Hidden off-screen initially */
+  top: 0;
+  width: 200px; /* Width of the sidebar */
+  height: 100%;
+  background-color: #f5deb3; /* Dark background for the sidebar */
+  color: black; /* White text for contrast */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: left 0.3s ease;
+  
+}
+
+.sidebar.open {
+  left: 0; /* Slide-in effect */
+  z-index: 1;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #142c26; /* Light gray color for items */
+}
+
+.sidebar li:hover {
+  color: #c99246; /* Change color on hover */
+}
+
+.closeButton {
+  align-self: flex-end; /* Align close button to the right */
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  background: none; /* No background */
+  border: none; /* No border */
+  outline: none; /* No outline */
+}
+.closeButton:hover{
+  background-color: #142c26;
+  color: white;
+}
+.main-container{
+  align-items: start;
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Main Container Styles */
+.Container {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #f5deb3; /* Dark background for contrast */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between boxes */
+   /* Padding around the container */
+}
+
+/* Inner Box Styles */
+.innerBox {
+  background-color: rgb(235, 242, 235); /* Light background for contrast */
+  height: 40vh; /* Fixed height for each box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
+  border: solid;
+  margin-top: 10px;
+}
+
+.innerBox:hover {
+  transform: scale(1.05); /* enlarges on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Responsive Design */
+/* to be suitable for mobiles and other devices */
+@media (max-width: 768px) {
+  .headerFile {
+    flex-direction: row; /* Stack items vertically on small screens */
+  }
+
+  .Container {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
+  .sidebar {
+    width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+}
+
+/* Contains search bar */
+.search-container{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: 100vw;
+  background-color: white;
+  height: 40vh;
+  margin: 60px 0 20px 0;
+  border-radius: 2%;
+  background-image: url('./assets/Sunrise.jpg');
+}
+
+.search-innerpart{
+  display: flex;
+  align-items: center;
+  width: auto
+  
+}
+.search-img{
+  height: 10vh;
+  width: auto;
+  /* border: solid;
+  border-color: #372a22; */
+  background-color: #f5deb3;
+  transition: transform 0.3s, border-radius 0.3s;
+}
+.search-img:hover{
+  cursor: pointer;
+  background-color: #f0ddb9;
+  transform: scale(1.15);
+  border: solid;
+  border-color: #142c26;
+  border-radius: 20%;
+}
+.search-innerpart input{
+  height: 10vh;
+  width: 60vw;
+  align-items: center;
+  text-align: center;
+  background-color: #142c26; /*dark green*/
+  border: solid;
+  border-color: #c99246;
+  color: white;
+}
+
+
+.footer{
+  background-color: #142c26;
+  height: 20vh;
+  padding: 10px;
+}
+
+.footer input{
+  height: 40%;
+  width: 20%;
+  align-items: center;
+  text-align: center;
+}
