@@ -215,3 +215,34 @@ h2{
   align-items: center;
   text-align: center;
 }
+
+/*for Land.jsx*/
+.land-body {
+  background-image: url(./assets/Sunrise.jpg);
+  width: 100vw;
+  height: 95vh;
+  background-size: cover;
+  background-position: center;  
+  background-repeat: no-repeat;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-row{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+
+}
+
+select{
+  font-weight: bolder;
+}
+option{
+  font-style: italic;
+  font-weight: bold;
+}
